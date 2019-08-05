@@ -19,35 +19,60 @@ class DataTable extends React.Component {
     const columns = [
       {
         Header: "User ID",
-        accessor: "user_id"
+        accessor: "user_id",
+        minWidth: 220,
+        foldable: true
       },
       {
         Header: "Username",
-        accessor: "username"
+        accessor: "username",
+        minWidth: 150
       },
       {
         Header: "Date",
-        accessor: "followed_date"
+        accessor: "followed_date",
+        minWidth: 120
       },
       {
         Header: "Whitelist",
-        accessor: "whitelist"
+        accessor: "whitelist",
+        Cell: props => (
+          <React.Fragment>
+            {props.original.whitelist ? "True" : "False"}
+          </React.Fragment>
+        )
       },
       {
         Header: "Blacklist",
-        accessor: "blacklist"
+        accessor: "blacklist",
+        Cell: props => (
+          <React.Fragment>
+            {props.original.whitelist ? "True" : "False"}
+          </React.Fragment>
+        )
       },
       {
         Header: "Following",
-        accessor: "us_following_them"
+        accessor: "us_following_them",
+        Cell: props => (
+          <React.Fragment>
+            {props.original.whitelist ? "True" : "False"}
+          </React.Fragment>
+        )
       },
       {
         Header: "Follower",
-        accessor: "them_following_us"
+        accessor: "them_following_us",
+        Cell: props => (
+          <React.Fragment>
+            {props.original.whitelist ? "True" : "False"}
+          </React.Fragment>
+        )
       },
       {
         Header: "Scraped From",
-        accessor: "scraped_from_user"
+        accessor: "scraped_from_user",
+        minWidth: 150
       }
     ];
 
