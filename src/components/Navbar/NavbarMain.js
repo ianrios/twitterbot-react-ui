@@ -28,7 +28,12 @@ class NavbarMain extends React.Component {
       isOpen: !this.state.isOpen
     });
   }
+  click = () => {
+    // this.props.parentMethod();
+    this.props.getData();
+  };
   render() {
+    const { userName = "null", getData } = this.props;
     return (
       <div>
         <Navbar color="light" light expand="md">
@@ -47,8 +52,10 @@ class NavbarMain extends React.Component {
                   options
                 </DropdownToggle>
                 <DropdownMenu right>
+                  <DropdownItem>{userName}</DropdownItem>
+                  <DropdownItem divider />
                   <DropdownItem>run bot</DropdownItem>
-                  <DropdownItem>update</DropdownItem>
+                  <DropdownItem onClick={this.click}>update</DropdownItem>
                   <DropdownItem divider />
                   <DropdownItem>settings</DropdownItem>
                 </DropdownMenu>
