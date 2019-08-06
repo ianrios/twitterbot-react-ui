@@ -4,7 +4,8 @@ import {
   Row
   // Col
 } from "reactstrap";
-import NavbarMain from "../Navbar/NavbarMain";
+import Navbar from "../Navbar/Navbar";
+import Footer from "../Footer/Footer";
 // import Sidebar from "../Sidebar/Sidebar";
 import DataTable from "../Table/DataTable";
 import axios from "axios";
@@ -37,7 +38,7 @@ class Page extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <NavbarMain
+        <Navbar
           userName={this.state.userName}
           getData={this.getData.bind(this)}
         />
@@ -45,8 +46,8 @@ class Page extends React.Component {
           <Row />
           <Sidebar />
         </Container> */}
-        <Container>
-          <Row style={{ marginTop: "15px", marginBottom: "15px" }}>
+        <Container style={{ marginTop: "50px", marginBottom: "15px" }}>
+          <Row>
             <DataTable
               userName={this.state.userName}
               botFollowData={this.state.bot_follow_data}
@@ -54,6 +55,7 @@ class Page extends React.Component {
             />
           </Row>
         </Container>
+        <Footer />
       </React.Fragment>
     );
   }
