@@ -16,7 +16,7 @@ class Page extends React.Component {
     this.state = {
       bot_follow_data: {},
       user_growth_data: {},
-      userName: "ian_rios_"
+      userName: "svnteen"
     };
   }
   async getData() {
@@ -46,7 +46,7 @@ class Page extends React.Component {
           <Sidebar />
         </Container> */}
         <Container>
-          <Row style={{ marginTop: "10px" }}>
+          <Row style={{ marginTop: "15px", marginBottom: "15px" }}>
             <DataTable
               userName={this.state.userName}
               botFollowData={this.state.bot_follow_data}

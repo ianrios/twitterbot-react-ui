@@ -26,7 +26,15 @@ class DataTable extends React.Component {
       {
         Header: "Username",
         accessor: "username",
-        minWidth: 150
+        minWidth: 150,
+        Cell: props => (
+          <a
+            href={`https://twitter.com/${props.original.username}`}
+            target="_blank"
+          >
+            {props.original.username}
+          </a>
+        )
       },
       {
         Header: "Date",
@@ -47,7 +55,7 @@ class DataTable extends React.Component {
         accessor: "blacklist",
         Cell: props => (
           <React.Fragment>
-            {props.original.whitelist ? "True" : "False"}
+            {props.original.blacklist ? "True" : "False"}
           </React.Fragment>
         )
       },
@@ -56,7 +64,7 @@ class DataTable extends React.Component {
         accessor: "us_following_them",
         Cell: props => (
           <React.Fragment>
-            {props.original.whitelist ? "True" : "False"}
+            {props.original.us_following_them ? "True" : "False"}
           </React.Fragment>
         )
       },
@@ -65,14 +73,25 @@ class DataTable extends React.Component {
         accessor: "them_following_us",
         Cell: props => (
           <React.Fragment>
-            {props.original.whitelist ? "True" : "False"}
+            {props.original.them_following_us ? "True" : "False"}
           </React.Fragment>
         )
       },
       {
         Header: "Scraped From",
         accessor: "scraped_from_user",
-        minWidth: 150
+        minWidth: 150,
+        Cell: props =>
+          props.original.scraped_from_user == "n" ? (
+            "Not Applicable"
+          ) : (
+            <a
+              href={`https://twitter.com/${props.original.scraped_from_user}`}
+              target="_blank"
+            >
+              {props.original.scraped_from_user}
+            </a>
+          )
       }
     ];
 
