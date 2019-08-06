@@ -54,8 +54,9 @@ class NavbarMain extends React.Component {
                 <DropdownMenu right>
                   <DropdownItem>{userName}</DropdownItem>
                   <DropdownItem divider />
+                  <DropdownItem onClick={this.click}>refresh data</DropdownItem>
                   <DropdownItem>run bot</DropdownItem>
-                  <DropdownItem onClick={this.click}>update</DropdownItem>
+                  <DropdownItem>update data / save changes</DropdownItem>
                   <DropdownItem divider />
                   <DropdownItem>settings</DropdownItem>
                 </DropdownMenu>

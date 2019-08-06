@@ -108,7 +108,7 @@ class DataTable extends React.Component {
             columns={columns}
           />
         ) : (
-          <h1>no data</h1>
+          <h1>no data, press 'refresh'</h1>
         )}
       </React.Fragment>
     );
