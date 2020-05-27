@@ -1,5 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+This project requires a backend, which is currently in testing. Due to no live backend server running, this project is unable to be demonstrated. However, you can still download and run the project locally to view the front end design. 
+
 ## Available Scripts
 
 In the project directory, you can run:
