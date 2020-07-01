@@ -42,5 +42,13 @@
     "@babel/core": "^7.8.3",
     "@babel/preset-env": "^7.8.3",
     "babel-plugin-styled-components": "^1.10.6"
+  },
+  "guppy": {
+    "id": "dd03c120-b0c8-11ea-9355-b5c87107f10f",
+    "name": "ui-twitterbot",
+    "type": "create-react-app",
+    "color": "#AA00FF",
+    "icon": null,
+    "createdAt": 1592418733619
   }
 }
